@@ -21,10 +21,12 @@ This repository contains SQL queries and analysis for financial insights related
 
 ![image](https://github.com/user-attachments/assets/6132200a-7aaa-4391-8a9a-1fef87d2f933)
 
+
+
 ---
 
 ### **2. Transaction Frequency Analysis**
-#### **Objective**
+#### **Problem Statement**
 Calculate **average transactions per month** per customer and categorize them into:
 - **High Frequency** (≥10 transactions/month)
 - **Medium Frequency** (3-9 transactions/month)
@@ -41,7 +43,7 @@ Calculate **average transactions per month** per customer and categorize them in
 ---
 
 ### **3. Account Inactivity Alert**
-#### **Objective**
+#### **Problem Statement**
 Identify accounts that have **no inflow transactions for over one year (365 days)**.
 
 #### **Query File**: [`query3.sql`](query3.sql)  
@@ -56,7 +58,7 @@ Identify accounts that have **no inflow transactions for over one year (365 days
 ---
 
 ### **4. Customer Lifetime Value (CLV) Estimation**
-#### **Objective**
+#### **Problem Statement**
 Estimate **Customer Lifetime Value (CLV)** based on **account tenure and transaction volume**.
 
 #### **Query File**: [`query4.sql`](query4.sql)  
