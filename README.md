@@ -11,8 +11,13 @@ This repository contains SQL queries and analysis for financial insights related
 #### **Objective**
 Identify customers with at least one **funded savings plan** and **investment plan**, sorted by total deposits.
 
-#### **Query File**: [`query1_high_value_customers.sql`](queries/query1_high_value_customers.sql)  
-#### **Results File**: [`query1_high_value_customers.csv`](results/query1_high_value_customers.csv)  
+#### **Query File**: [`query1.sql`](query.sql)  
+
+
+
+#### **Results File**: [`query1.csv`](query1.csv)  
+
+![image](https://github.com/user-attachments/assets/6132200a-7aaa-4391-8a9a-1fef87d2f933)
 
 ---
 
