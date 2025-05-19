@@ -171,7 +171,7 @@ This query estimates Customer Lifetime Value (CLV) based on account tenure and t
 ---
 
 ### **Author: Adebayo Adebanjo**  
-🚀 **GitHub Profile:** [[Your GitHub Profile Link](https://github.com/akaboyo/DataAnalytics-Assessment)]
+🚀 **GitHub Profile:** [[My GitHub Profile Link](https://github.com/akaboyo/DataAnalytics-Assessment)]
 
 ---
 
