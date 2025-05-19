@@ -78,7 +78,7 @@ Estimate **Customer Lifetime Value (CLV)** based on **account tenure and transac
 ---
 
 ### **Author: Adebayo**  
-🚀 **GitHub Profile:** [Your GitHub Profile Link]()  
+🚀 **GitHub Profile:** [[Your GitHub Profile Link](https://github.com/akaboyo/DataAnalytics-Assessment)]
 
 ---
 
