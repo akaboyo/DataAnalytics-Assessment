@@ -8,7 +8,7 @@ This repository contains SQL queries and analysis for financial insights related
 ## SQL Queries & Results
 
 ### **1. High-Value Customers with Multiple Products**
-#### **Objective**
+#### **Problem Statement**
 Identify customers with at least one **funded savings plan** and **investment plan**, sorted by total deposits.
 
 #### **Query File**: [`query1.sql`](query.sql)  
@@ -18,6 +18,8 @@ Identify customers with at least one **funded savings plan** and **investment pl
 #### **Results File**: [`query1.csv`](query1.csv)  
 
 ![image](https://github.com/user-attachments/assets/6132200a-7aaa-4391-8a9a-1fef87d2f933)
+
+
 
 ---
 
