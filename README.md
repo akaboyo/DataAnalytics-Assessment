@@ -20,6 +20,13 @@ DataAnalytics-Assessment/
 #### **Problem Statement**
 - Identify customers with at least one **funded savings plan** and **investment plan**, sorted by total deposits.
 - Sort results based on total deposits.
+### Task: 
+Write a query to find customers with at least one funded savings plan AND one funded investment plan, sorted by total deposits.
+### Tables:
+- users_customuser
+- savings_savingsaccount
+- plans_plan
+
 
 #### **Query File**: [`query1.sql`](query.sql)  
 
