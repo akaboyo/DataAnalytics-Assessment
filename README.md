@@ -20,9 +20,9 @@ DataAnalytics-Assessment/
 #### **Problem Statement**
 - Identify customers with at least one **funded savings plan** and **investment plan**, sorted by total deposits.
 - Sort results based on total deposits.
-### Task: 
+#### Task: 
 Write a query to find customers with at least one funded savings plan AND one funded investment plan, sorted by total deposits.
-### Tables:
+#### Tables:
 - users_customuser
 - savings_savingsaccount
 - plans_plan
@@ -37,9 +37,9 @@ Write a query to find customers with at least one funded savings plan AND one fu
 
 ![image](https://github.com/user-attachments/assets/6132200a-7aaa-4391-8a9a-1fef87d2f933)
 
-## Challenge & Insights
+### Challenge & Insights
 - This query identifies high-value customers who have at least one funded savings plan and one funded investment plan, ranking them by total deposits.
-## Approach
+### Approach
 - Joins three tables (users_customuser, savings_savingsaccount, plans_plan) to retrieve users with both savings and investment accounts.
 - Filters customers who have a funded savings plan (is_regular_savings = 1) and a funded investment plan (is_a_fund = 1).
 - Counts unique savings accounts (COUNT(DISTINCT s.id)) and investment plans (COUNT(DISTINCT p.id)) per user.
@@ -52,12 +52,14 @@ Write a query to find customers with at least one funded savings plan AND one fu
 
 ### **2. Transaction Frequency Analysis**
 #### **Problem Statement**
-### Task:
+This query categorizes customers based on their transaction frequency, helping identify high-frequency, medium-frequency, and low-frequency users. This insight is useful for understanding customer engagement trends and optimizing retention strategies.
+
+#### Task:
 Calculate **average transactions per month** per customer and categorize them into:
 - **High Frequency** (≥10 transactions/month)
 - **Medium Frequency** (3-9 transactions/month)
 - **Low Frequency** (≤2 transactions/month)
-### Tables:
+#### Tables:
 - users_customuser
 - savings_savingsaccount
 
@@ -70,8 +72,6 @@ Calculate **average transactions per month** per customer and categorize them in
 ![image](https://github.com/user-attachments/assets/2256ad94-b60a-4269-b1a7-433d48f520ed)
 
 ## Query Explanation & Insights for Question 2
-## Objective
-This query categorizes customers based on their transaction frequency, helping identify high-frequency, medium-frequency, and low-frequency users. This insight is useful for understanding customer engagement trends and optimizing retention strategies.
 ## Approach
 - Calculates Transactions Per Month for Each User:
 - Retrieves the total number of transactions (COUNT(s.id)) per user.
@@ -99,6 +99,12 @@ This query categorizes customers based on their transaction frequency, helping i
 #### **Problem Statement**
 Identify accounts that have **no inflow transactions for over one year (365 days)**.
 
+#### Task:
+Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) .
+#### Tables:
+- plans_plan
+- savings_savingsaccount
+
 #### **Query File**: [`query3.sql`](query3.sql)  
 
 ![Assessment_Query3](https://github.com/user-attachments/assets/2f036490-0329-4e15-98cb-ca2b9ff74dd7)
@@ -108,8 +114,6 @@ Identify accounts that have **no inflow transactions for over one year (365 days
 ![image](https://github.com/user-attachments/assets/be7229e9-5d12-46d1-8f35-42abfb32ca4d)
 
 ## Query Explanation & Insights for Question 3
-## Objective
-This query identifies inactive savings and investment accounts that haven’t had transactions for over 365 days. The goal is to flag accounts with no recent inflows, helping businesses take action, such as re-engagement strategies.
 ## Approach
 - First Query: Savings Accounts
 - Selects savings accounts (savings_savingsaccount) where transactions (confirmed_amount > 0) have occurred.
@@ -137,6 +141,16 @@ This query identifies inactive savings and investment accounts that haven’t ha
 #### **Problem Statement**
 Estimate **Customer Lifetime Value (CLV)** based on **account tenure and transaction volume**.
 
+#### Task:
+For each customer, assuming the profit_per_transaction is 0.1% of the transaction value, calculate:
+- Account tenure (months since signup)
+- Total transactions
+- Estimated CLV (Assume: CLV = (total_transactions / tenure) * 12 * avg_profit_per_transaction)
+- Order by estimated CLV from highest to lowest
+#### Tables:
+- users_customuser
+- savings_savingsaccount
+
 #### **Query File**: [`query4.sql`](query4.sql)  
 
 ![Assessment_Query4](https://github.com/user-attachments/assets/275446cd-02f9-409d-9c27-a950ddb7bf45)
@@ -146,8 +160,6 @@ Estimate **Customer Lifetime Value (CLV)** based on **account tenure and transac
 ![image](https://github.com/user-attachments/assets/79a68731-8d6f-45b1-bff2-040bc2e6d688)
 
 ## Query Explanation & Insights for Question 4
-## Objective
-This query estimates Customer Lifetime Value (CLV) based on account tenure and transaction volume. The goal is to measure the potential value of each customer by analyzing their activity over time.
 ## Approach
 - Calculates Customer Tenure:
 - Uses TIMESTAMPDIFF(MONTH, u.date_joined, CURDATE()) to compute the number of months since the customer joined.
