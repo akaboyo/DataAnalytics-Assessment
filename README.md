@@ -52,10 +52,14 @@ Write a query to find customers with at least one funded savings plan AND one fu
 
 ### **2. Transaction Frequency Analysis**
 #### **Problem Statement**
+### Task:
 Calculate **average transactions per month** per customer and categorize them into:
 - **High Frequency** (≥10 transactions/month)
 - **Medium Frequency** (3-9 transactions/month)
 - **Low Frequency** (≤2 transactions/month)
+### Tables:
+- users_customuser
+- savings_savingsaccount
 
 #### **Query File**: [`query2.sql`](query2.sql)
 
